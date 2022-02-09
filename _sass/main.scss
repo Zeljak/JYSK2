@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./_utilities";
+
+@import "../node_modules/bulma/bulma";
+
+//GENERAL
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $family-primary;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+// NAVBAR + HAMBURGER MENU
+
+nav {
+  background-color: #acaba8;
+  padding: 1rem 4rem 1rem 2.5rem;
+  opacity: 0.72;
+  border-radius: 41px;
+
+  @include for-phone {
+    background: none;
+  }
+}
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 40px;
+  transition: 0.5s;
+  border-radius: 41px;
+
+  @include for-phone {
+    top: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin-left: 2.5rem;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+// .navbar.top {
+//   background: transparent;
+// }
+.grey {
+  color: $brownish-grey;
+}
+
+.grey:hover {
+  text-decoration: underline;
+  color: $brownish-grey;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.nav-link {
+  font-family: $family-primary;
+  color: #fff;
+  text-transform: uppercase;
+
+  @include for-phone {
+    font-size: 16px;
+    color: #101010;
+  }
+
+  @include for-tablet {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  @include for-desktop {
+    font-size: 18px;
+    line-height: 39px;
+  }
+
+  @include for-widescreen {
+    font-size: 22px;
+    line-height: 47px;
+  }
+
+  @include for-fullhd {
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
+
+@include for-phone {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar1 {
+    justify-content: flex-end;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+// Header with photo and title
+.header {
+  background: url(../_assets/images/header_cover.png) no-repeat center
+    center/cover;
+  position: relative;
+  background-color: $pale;
+  height: 100vh;
+
+  @include for-phone {
+    height: 32vh;
+  }
+
+  @include for-tablet {
+    height: 60vh;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+
+    @include for-phone {
+      width: 300px;
+      top: 60%;
+      left: 40%;
+    }
+
+    @include for-tablet {
+      top: 66%;
+    }
+
+    @include for-widescreen {
+      top: 60%;
+    }
+
+    h1 {
+      font-family: $family-third;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 200;
+
+      @include for-phone {
+        font-size: 20px;
+        line-height: 18px;
+        text-align: right;
+      }
+
+      @include for-tablet {
+        font-size: 33px;
+        line-height: 40px;
+      }
+
+      @include for-desktop {
+        font-size: 44px;
+        line-height: 77px;
+      }
+
+      @include for-widescreen {
+        font-size: 55px;
+        line-height: 77px;
+      }
+
+      @include for-fullhd {
+        font-size: 83px;
+        line-height: 77px;
+      }
+    }
+    h2 {
+      font-family: $family-secondary;
+      color: #fff;
+      text-align: right;
+      text-decoration: underline 2px #fff;
+
+      @include for-phone {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @include for-tablet {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include for-desktop {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include for-widescreen {
+        font-size: 30px;
+        line-height: 77px;
+      }
+
+      @include for-fullhd {
+        font-size: 50px;
+        line-height: 77px;
+      }
+    }
+  }
+
+  &__logo {
+    width: 157px;
+    margin-top: 1.5rem;
+
+    @include for-phone {
+      width: 56px;
+    }
+
+    @include for-tablet {
+      width: 65px;
+    }
+
+    @include for-desktop {
+      width: 87px;
+    }
+
+    @include for-widescreen {
+      width: 87px;
+    }
+  }
+}
+
+//FOOTER
+.footer {
+  background-color: $white;
+}

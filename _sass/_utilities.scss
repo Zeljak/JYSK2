@@ -1,0 +1,52 @@
+//** MEDIA QUERIES **
+
+@mixin for-small-phone {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin for-phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1024px) and (max-width: 1365px) {
+    @content;
+  }
+}
+@mixin for-widescreen {
+  @media (min-width: 1366px) and (max-width: 1919px) {
+    @content;
+  }
+}
+@mixin for-fullhd {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin for-ultrahd {
+  @media (min-width: 2500px) {
+    @content;
+  }
+}
+//** VARIABLES **
+
+//colors
+$brownish-grey: #707070;
+$pale: #e9e4db;
+$cement: #969593;
+
+//font-family
+$family-primary: "Raleway", sans-serif;
+$family-secondary: "Poiret One", cursive;
+$family-third: "Montserrat", sans-serif;
+$family-fourth: "Great Vibes", cursive;
