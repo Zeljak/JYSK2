@@ -32,7 +32,7 @@ img {
   transition: all ease 200ms;
 
   &.dark {
-    background-color: #ffcc00;
+    background-color: #000;
   }
 
   @include for-phone {
@@ -201,7 +201,6 @@ img {
   }
 }
 .break {
-  
   flex-basis: 100%;
 }
 
@@ -401,6 +400,10 @@ img {
   padding: 50px;
   position: relative;
 
+  @include for-tablet {
+    padding: 20px;
+  }
+
   img {
     position: relative;
     z-index: 2;
@@ -414,8 +417,12 @@ img {
     position: absolute;
     left: 0px;
     top: 0px;
-    background-color: #ffcc00;
+    background-color: $cement;
     z-index: 1;
+
+    @include for-phone {
+      display: none;
+    }
   }
 }
 
@@ -624,6 +631,10 @@ img {
     color: #fff;
     background-color: $brownish-grey;
   }
+
+  @include for-small-phone {
+    padding: 7px 5px;
+  }
 }
 
 .photo-wrapper3 {
@@ -685,7 +696,7 @@ img {
     }
 
     @include for-small-phone {
-      padding: 3px 5px;
+      padding: 7px 5px;
     }
   }
 }
@@ -962,7 +973,7 @@ img {
   padding: 10px 30px;
   color: #fff;
   background-color: $brownish-grey;
-  border: none;
+  border: solid 1px $brownish-grey;
   font-family: $family-third;
   font-size: 14px;
   line-height: 1.07;
@@ -977,6 +988,10 @@ img {
 
   @include for-phone {
     padding: 7px 17px;
+  }
+
+  @include for-small-phone {
+    padding: 7px 5px;
   }
 }
 
@@ -1003,7 +1018,7 @@ img {
   }
 
   @include for-small-phone {
-    padding: 3px 5px;
+    padding: 7px 5px;
   }
 }
 
@@ -1030,6 +1045,20 @@ img {
   @include for-phone {
     padding: 0 0.5rem;
   }
+}
+
+.dot {
+  width: 80px;
+  height: 80px;
+  background-color: $cement;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  font-family: $family-fourth;
+  font-size: 17px;
+  line-height: 17px;
+  padding: 18px;
+  margin: 0 auto;
 }
 
 //FOOTER

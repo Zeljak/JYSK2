@@ -11475,7 +11475,7 @@ img {
   transition: all ease 200ms;
 }
 .nav-menu-wrapper.dark {
-  background-color: #ffcc00;
+  background-color: #000;
 }
 @media (max-width: 767px) {
   .nav-menu-wrapper {
@@ -11891,6 +11891,11 @@ img {
   padding: 50px;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card1 {
+    padding: 20px;
+  }
+}
 .card1 img {
   position: relative;
   z-index: 2;
@@ -11903,8 +11908,13 @@ img {
   position: absolute;
   left: 0px;
   top: 0px;
-  background-color: #ffcc00;
+  background-color: #969593;
   z-index: 1;
+}
+@media (max-width: 767px) {
+  .card1::before {
+    display: none;
+  }
 }
 
 .card2 {
@@ -12140,6 +12150,11 @@ img {
   color: #fff;
   background-color: #707070;
 }
+@media (max-width: 320px) {
+  .btn {
+    padding: 7px 5px;
+  }
+}
 
 .photo-wrapper3 {
   display: -webkit-box;
@@ -12212,7 +12227,7 @@ img {
 }
 @media (max-width: 320px) {
   .savjeti .btn {
-    padding: 3px 5px;
+    padding: 7px 5px;
   }
 }
 
@@ -12550,7 +12565,7 @@ img {
   padding: 10px 30px;
   color: #fff;
   background-color: #707070;
-  border: none;
+  border: solid 1px #707070;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 1.07;
@@ -12566,6 +12581,11 @@ img {
 @media (max-width: 767px) {
   .btn2 {
     padding: 7px 17px;
+  }
+}
+@media (max-width: 320px) {
+  .btn2 {
+    padding: 7px 5px;
   }
 }
 
@@ -12594,7 +12614,7 @@ img {
 }
 @media (max-width: 320px) {
   .btn3 {
-    padding: 3px 5px;
+    padding: 7px 5px;
   }
 }
 
@@ -12627,6 +12647,20 @@ img {
   .gallery {
     padding: 0 0.5rem;
   }
+}
+
+.dot {
+  width: 80px;
+  height: 80px;
+  background-color: #969593;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "Great Vibes", cursive;
+  font-size: 17px;
+  line-height: 17px;
+  padding: 18px;
+  margin: 0 auto;
 }
 
 .footer {
