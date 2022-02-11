@@ -12750,3 +12750,9 @@ nav {
     width: 215px;
   }
 }
+
+.proba::before {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
