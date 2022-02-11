@@ -12,3 +12,14 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
+
+var navi = document.querySelector('.nav-menu-wrapper');
+window.addEventListener('scroll', function() {
+  console.log(navi);
+  console.log('scrolling', window.scrollY);
+  if (window.scrollY > 40) {
+    navi.classList.add('dark');
+  } else {
+    navi.classList.remove('dark');
+  }
+});
