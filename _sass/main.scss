@@ -400,6 +400,10 @@ img {
   padding: 50px;
   position: relative;
 
+  @include for-phone {
+    padding: 8px 0;
+  }
+
   @include for-tablet {
     padding: 20px;
   }
@@ -407,6 +411,10 @@ img {
   img {
     position: relative;
     z-index: 2;
+
+    @include for-phone {
+      width: 100% !important;
+    }
   }
 
   &::before {
@@ -421,7 +429,8 @@ img {
     z-index: 1;
 
     @include for-phone {
-      display: none;
+      left: auto;
+      right: 0px;
     }
   }
 }
@@ -567,7 +576,7 @@ img {
 
   @include for-phone {
     margin-top: 1rem;
-    grid-gap: 0;
+    padding: 0 20px;
   }
 
   @include for-tablet {
@@ -592,18 +601,25 @@ img {
   justify-content: space-evenly;
   margin-top: 4rem;
 
+  img {
+    width: 46%;
+  }
+
   @include for-phone {
     margin-top: 1rem;
-    grid-gap: 0;
+    padding: 0 10px;
+
+    img {
+      width: calc(50% - 20px);
+      margin: 0 10px;
+    }
   }
 
   @include for-tablet {
     margin-top: 2rem;
   }
 
-  img {
-    width: 46%;
-  }
+ 
 }
 
 .line {

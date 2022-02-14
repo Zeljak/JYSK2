@@ -11891,6 +11891,11 @@ img {
   padding: 50px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .card1 {
+    padding: 8px 0;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .card1 {
     padding: 20px;
@@ -11899,6 +11904,11 @@ img {
 .card1 img {
   position: relative;
   z-index: 2;
+}
+@media (max-width: 767px) {
+  .card1 img {
+    width: 100% !important;
+  }
 }
 .card1::before {
   content: "";
@@ -11913,7 +11923,8 @@ img {
 }
 @media (max-width: 767px) {
   .card1::before {
-    display: none;
+    left: auto;
+    right: 0px;
   }
 }
 
@@ -12081,7 +12092,7 @@ img {
 @media (max-width: 767px) {
   .mini-container2 {
     margin-top: 1rem;
-    grid-gap: 0;
+    padding: 0 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -12109,19 +12120,23 @@ img {
           justify-content: space-evenly;
   margin-top: 4rem;
 }
+.mini-container3 img {
+  width: 46%;
+}
 @media (max-width: 767px) {
   .mini-container3 {
     margin-top: 1rem;
-    grid-gap: 0;
+    padding: 0 10px;
+  }
+  .mini-container3 img {
+    width: calc(50% - 20px);
+    margin: 0 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .mini-container3 {
     margin-top: 2rem;
   }
-}
-.mini-container3 img {
-  width: 46%;
 }
 
 .line {
