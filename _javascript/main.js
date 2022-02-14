@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Bulma!');
+  // console.log('Hello Bulma!');
 });
 
 const hamburger = document.querySelector(".hamburger");
@@ -13,13 +13,13 @@ function mobileMenu() {
 }
 
 
+if (window.innerWidth > 767) {}
 var navi = document.querySelector('.nav-menu-wrapper');
 window.addEventListener('scroll', function() {
-  console.log(navi);
-  console.log('scrolling', window.scrollY);
   if (window.scrollY > 40) {
     navi.classList.add('dark');
   } else {
     navi.classList.remove('dark');
   }
 });
+

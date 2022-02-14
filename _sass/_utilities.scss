@@ -18,6 +18,12 @@
   }
 }
 
+@mixin for-desktop-only {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin for-desktop {
   @media (min-width: 1024px) and (max-width: 1365px) {
     @content;

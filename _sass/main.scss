@@ -26,11 +26,13 @@ img {
 
 .nav-menu-wrapper {
   background-color: #acaba8;
-  padding: 1rem 4rem 1rem 2.5rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  margin: 0 20px;
   opacity: 0.72;
   border-radius: 41px;
-  transition: all ease 200ms;
+  transition: all 200ms ease;
   position: fixed;
+  top: 27px;
 
   &.dark {
     background-color: #000;
@@ -56,6 +58,7 @@ img {
   align-items: center;
   padding: 1rem 1.5rem;
   position: relative;
+  z-index: 1;
   top: 40px;
   transition: 0.5s;
   border-radius: 41px;
@@ -66,20 +69,18 @@ img {
   }
 
   ul {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   li {
-    margin-left: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
 
     @include for-phone {
       margin-left: 0;
+      margin-right: 0;
     }
   }
   a {
@@ -95,9 +96,22 @@ img {
   }
 }
 
-// .navbar.top {
-//   background: transparent;
-// }
+@include for-desktop-only {
+  .nav-menu-wrapper {
+    &.dark {
+      padding: .6rem 2rem .6rem 2rem;
+      top: 1rem;
+      .break {
+        display: none;
+      }
+      .nav-link {
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
 .grey {
   color: $brownish-grey;
 }
@@ -161,17 +175,13 @@ img {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
+    background-color: black;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     margin: 20px;
     width: calc(100% - 40px);
-
-    @include for-phone {
-      background-color: black;
-    }
   }
 
   .navbar1 {
@@ -185,25 +195,13 @@ img {
   }
 
   .nav-item {
-    margin: 2.5rem 0;
-
-    @include for-phone {
-      padding: 20px;
-      margin: 0;
-    }
-  }
-
-  .break {
-    display: none;
+    padding: 20px;
+    margin: 0;
   }
 
   .hamburger {
+    position: absolute;
     display: block;
-    cursor: pointer;
-
-    @include for-phone {
-      position: absolute;
-    }
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -219,7 +217,12 @@ img {
   }
 }
 .break {
-  flex-basis: 100%;
+  display: none;
+}
+@mixin for-desktop-only {
+  .break {
+    flex-basis: 100%;
+  }
 }
 
 // Header with photo and title
