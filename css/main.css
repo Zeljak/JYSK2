@@ -11473,9 +11473,15 @@ img {
   border-radius: 41px;
   -webkit-transition: all ease 200ms;
   transition: all ease 200ms;
+  position: fixed;
 }
 .nav-menu-wrapper.dark {
   background-color: #000;
+}
+@media (max-width: 767px) {
+  .nav-menu-wrapper.dark {
+    background: none;
+  }
 }
 @media (max-width: 767px) {
   .nav-menu-wrapper {
@@ -11500,7 +11506,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 1.5rem;
-  position: fixed;
+  position: relative;
   top: 40px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -11524,6 +11530,11 @@ img {
 }
 .navbar1 li {
   margin-left: 2.5rem;
+}
+@media (max-width: 767px) {
+  .navbar1 li {
+    margin-left: 0;
+  }
 }
 .navbar1 a {
   color: #fff;
@@ -11644,6 +11655,12 @@ img {
     margin: 2.5rem 0;
   }
 }
+@media (max-width: 767px) and (max-width: 767px) {
+  .nav-item {
+    padding: 20px;
+    margin: 0;
+  }
+}
 @media (max-width: 767px) {
   .break {
     display: none;
@@ -11653,6 +11670,11 @@ img {
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .hamburger {
+    position: absolute;
   }
 }
 @media (max-width: 767px) {
@@ -11933,6 +11955,7 @@ img {
   padding: 2rem;
   text-align: center;
   color: white;
+  width: 60%;
 }
 .card2 h3 {
   font-family: "Raleway", sans-serif;

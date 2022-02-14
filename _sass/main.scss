@@ -30,9 +30,14 @@ img {
   opacity: 0.72;
   border-radius: 41px;
   transition: all ease 200ms;
+  position: fixed;
 
   &.dark {
     background-color: #000;
+
+    @include for-phone {
+      background: none;
+    }
   }
 
   @include for-phone {
@@ -50,7 +55,7 @@ img {
   color: #fff;
   align-items: center;
   padding: 1rem 1.5rem;
-  position: fixed;
+  position: relative;
   top: 40px;
   transition: 0.5s;
   border-radius: 41px;
@@ -72,6 +77,10 @@ img {
 
   li {
     margin-left: 2.5rem;
+
+    @include for-phone {
+      margin-left: 0;
+    }
   }
   a {
     color: #fff;
@@ -177,6 +186,11 @@ img {
 
   .nav-item {
     margin: 2.5rem 0;
+
+    @include for-phone {
+      padding: 20px;
+      margin: 0;
+    }
   }
 
   .break {
@@ -186,6 +200,10 @@ img {
   .hamburger {
     display: block;
     cursor: pointer;
+
+    @include for-phone {
+      position: absolute;
+    }
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -440,6 +458,7 @@ img {
   padding: 2rem;
   text-align: center;
   color: white;
+  width: 60%;
 
   h3 {
     font-family: $family-primary;
@@ -618,8 +637,6 @@ img {
   @include for-tablet {
     margin-top: 2rem;
   }
-
- 
 }
 
 .line {
